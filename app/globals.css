@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 27% 98%;
+  --foreground: 219 55% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 219 55% 12%;
+  --muted: 220 20% 94%;
+  --muted-foreground: 219 16% 43%;
+  --border: 216 25% 89%;
+  --input: 216 25% 89%;
+  --ring: 31 89% 55%;
+  --radius: 0.5rem;
+  --stripe-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f8f9fb;
+  color: #112d57;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(242, 140, 40, 0.25);
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(95, 151, 235, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 151, 235, 0.13) 1px, transparent 1px),
+    linear-gradient(rgba(95, 151, 235, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 151, 235, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
+}
+
+.blueprint-lines {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(76, 144, 255, 0.38), transparent 26%),
+    radial-gradient(circle at 8% 88%, rgba(242, 140, 40, 0.13), transparent 30%),
+    linear-gradient(35deg, transparent 0 61%, rgba(74, 129, 212, 0.15) 61.2% 61.5%, transparent 61.7%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
