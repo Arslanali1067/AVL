@@ -9,10 +9,8 @@ import { Button } from "@/components/ui/button";
 export function Navbar() {
   const pathname = usePathname();
   const links = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Home", href: "/", matchPath: "/" },
+    { name: "Contact", href: "/contact", matchPath: "/contact" },
   ];
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,18 +47,23 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 lg:flex">
           {links.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = pathname === link.matchPath;
             return (
               <a
                 key={link.name}
                 href={link.href}
-                className={`relative text-sm font-medium transition-colors duration-300 py-1.5 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:transition-transform after:duration-300 after:ease-out ${
+                className={`relative text-sm font-semibold transition-colors duration-300 pb-2 ${
                   isActive
-                    ? "text-white after:scale-x-100 after:bg-accent"
-                    : "text-slate-300 hover:text-white after:scale-x-0 after:bg-accent hover:after:scale-x-100"
+                    ? "text-white"
+                    : "text-slate-300 hover:text-white"
                 }`}
               >
                 {link.name}
+                <span
+                  className={`absolute bottom-0 left-0 h-[2px] w-full rounded-full bg-accent transition-transform duration-300 origin-left ${
+                    isActive ? "scale-x-100" : "scale-x-0"
+                  }`}
+                />
               </a>
             );
           })}
@@ -92,15 +95,15 @@ export function Navbar() {
         <div className="lg:hidden border-t border-white/10 bg-[#061a36] px-5 py-4">
           <div className="flex flex-col gap-4">
             {links.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = pathname === link.matchPath;
               return (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`text-base font-medium transition-colors duration-300 py-2 ${
+                  className={`text-base font-semibold transition-colors duration-300 py-2 border-b-2 ${
                     isActive
-                      ? "text-accent font-semibold"
-                      : "text-slate-300 hover:text-white"
+                      ? "text-white border-accent"
+                      : "text-slate-300 hover:text-white border-transparent"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
