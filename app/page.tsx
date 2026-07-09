@@ -34,8 +34,7 @@ export default function Home() {
       tl.from(".hero-logo", { opacity: 0, y: 20, duration: 0.8, delay: 0.2 })
         .from(".hero-title", { opacity: 0, y: 30, duration: 0.8 }, "-=0.6")
         .from(".hero-desc", { opacity: 0, y: 20, duration: 0.8 }, "-=0.6")
-        .from(".hero-btn", { opacity: 0, scale: 0.9, duration: 0.6, ease: "back.out(1.5)" }, "-=0.6")
-        .from(".hero-stats span", { opacity: 0, y: 15, duration: 0.6, stagger: 0.1 }, "-=0.4");
+        .from(".hero-btn", { opacity: 0, scale: 0.9, duration: 0.6, ease: "back.out(1.5)" }, "-=0.6");
 
       // Continuous float animation for icons
       gsap.to(".float-icon", {
@@ -164,15 +163,7 @@ function HeroSection() {
             </Button>
           </div>
 
-          <div className="hero-stats mt-10 flex flex-wrap justify-center gap-x-5 gap-y-3 text-xs font-semibold text-white/60 sm:gap-x-8">
-            <span className="flex items-center gap-1.5">
-              <Sparkles className="float-icon size-3.5 text-accent" /> Maui, HI Delivery &amp; Setup
-            </span>
-            <span className="hidden sm:inline">•</span>
-            <span>Professional Support Included</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Tailored for Any Crowd Size</span>
-          </div>
+
         </div>
       </div>
     </section>
