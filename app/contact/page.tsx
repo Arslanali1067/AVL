@@ -7,6 +7,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { MotionSection } from "@/components/motion-section";
+import { AnimatedRays } from "@/components/ui/animated-rays";
 
 export default function ContactPage() {
   return (
@@ -15,7 +16,12 @@ export default function ContactPage() {
         <Navbar />
         
         {/* Contact Page Header */}
-        <section className="bg-[#061a36] text-white pt-36 pb-20 px-5 text-center relative overflow-hidden">
+        <section className="relative isolate overflow-hidden bg-[#061a36] text-white pt-36 pb-20 px-5 text-center">
+          {/* Animated Light Rays Background */}
+          <div className="absolute inset-0 -z-10 opacity-90">
+            <AnimatedRays forceDark />
+          </div>
+          
           <div className="absolute inset-0 opacity-20 blueprint-grid" />
           <div className="relative z-10 mx-auto max-w-4xl">
             <p className="text-xs font-black uppercase tracking-[0.25em] text-accent mb-3">
