@@ -71,10 +71,10 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <div className="hidden items-center gap-3 sm:flex">
-            <Button asChild size="sm">
+            <Button asChild size="sm" className="group transition-all hover:scale-105">
               <a href="/contact">
                 Get a Quote
-                <ArrowRight />
+                <ArrowRight className="ml-1.5 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </Button>
           </div>

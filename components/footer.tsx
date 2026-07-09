@@ -23,13 +23,13 @@ export function Footer() {
         
         {/* Social Icons */}
         <div className="mt-6 flex justify-center gap-6">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/62 hover:text-white transition" aria-label="Facebook">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/62 transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:text-white" aria-label="Facebook">
             <Facebook className="size-5" />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/62 hover:text-white transition" aria-label="Instagram">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/62 transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:text-white" aria-label="Instagram">
             <Instagram className="size-5" />
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white/62 hover:text-white transition" aria-label="YouTube">
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white/62 transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:text-white" aria-label="YouTube">
             <Youtube className="size-5" />
           </a>
         </div>
